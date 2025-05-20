@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>FAQ | Lenin Computer System Inc.</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/faq.css">
+    </head>
+<body>
+    <nav>
+        <div class="logo">
+            <img src="images/LCS2017_Logo - Copy.png" alt="">
+        </div>
+        <div class="hamburger">
+            <div class="bar"></div>
+            <div class="bar"></div>
+            <div class="bar"></div>
+        </div>
+        <ul class="nav-links">
+            <li><a href="home.html">Home</a></li>
+            <li><a href="products.html">Products</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li class="dropdown">
+                <a href="Services.html" class="dropbtn">SERVICES <i class="fa fa-caret-down"></i></a>
+                <div class="dropdown-content">
+                    <a href="solutions.html">Solutions</a>
+                </div>
+            </li>
+            <li><a class="nav-cta-button" href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
+
+    <section class="faq-section">
+        <h1>Frequently Asked Questions</h1>
+        <div class="faq-item">
+            <div class="faq-question">What services does Lenin Computer System Inc. offer?</div>
+            <div class="faq-answer">
+                We offer IT consulting, software development, system integration, managed services, surveillance solutions, networking, biometrics, printers, LED walls, and more.
+            </div>
+        </div>
+        <div class="faq-item">
+            <div class="faq-question">How can I request a quote or consultation?</div>
+            <div class="faq-answer">
+                You can use our <a href="contact.html">Contact Us</a> page to send a message, or call us directly at the phone number listed on our website.
+            </div>
+        </div>
+        <div class="faq-item">
+            <div class="faq-question">Do you provide after-sales support?</div>
+            <div class="faq-answer">
+                Yes, we offer comprehensive after-sales support, including maintenance, repairs, and technical assistance for all products and solutions we provide.
+            </div>
+        </div>
+        <div class="faq-item">
+            <div class="faq-question">Where are you located?</div>
+            <div class="faq-answer">
+                Our main office is in Zamboanga City, Philippines. Please see our <a href="contact.html">Contact Information</a> for details.
+            </div>
+        </div>
+        <div class="faq-item">
+            <div class="faq-question">Can you customize solutions for my business?</div>
+            <div class="faq-answer">
+                Absolutely! We tailor our IT solutions to fit the unique needs and goals of each client. Contact us to discuss your requirements.
+            </div>
+        </div>
+        <div class="faq-item">
+            <div class="faq-question">How do I track my repair or service request?</div>
+            <div class="faq-answer">
+                You can use the "Track Repairs" option in the Get Help section of our website, or contact our support team for updates.
+            </div>
+        </div>
+    </section>
+
+    <div class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="footer-col">
+                    <h4>Company</h4>
+                    <ul>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="Services.html">Our Services</a></li>
+                        <li><a href="#">Privacy and Policy</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Get Help</h4>
+                    <ul>
+                        <li><a href="#">FAQ</a></li>
+                        <li><a href="#">Track Repairs</a></li>
+                        <li><a href="#">Returns</a></li>
+                        <li><a href="#">Shipping</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Follow Us</h4>
+                    <div class="social-links">
+                        <a href="https://facebook.com" target="_blank"><img src="images/facebook.png" alt=""></a>
+                        <a href="https://instagram.com" target="_blank"><img src="images/instagram.png" alt=""></a>
+                        <a href="https://mail.google.com/" target="_blank"><img src="images/gmail.png" alt=""></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="copyright-footer">
+        <span class="copyright-symbol">&copy;</span> 2025 Lenin Computer System Inc. - All Rights Reserved
+    </div>
+    <script>
+        // Hamburger menu toggle
+        document.addEventListener('DOMContentLoaded', function() {
+            const hamburger = document.querySelector('.hamburger');
+            const navLinks = document.querySelector('.nav-links');
+            hamburger.addEventListener('click', function() {
+                navLinks.classList.toggle('nav-active');
+            });
+        });
+
+        // FAQ accordion
+        document.querySelectorAll('.faq-question').forEach(q => {
+            q.addEventListener('click', function() {
+                const item = this.parentElement;
+                item.classList.toggle('active');
+            });
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,1159 @@
+/* Nav Styles */
+nav {
+  position: sticky;
+  top: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 50px;
+  background-color: #fff;
+  z-index: 10;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+}
+
+.logo img {
+  width: 150px;
+}
+
+.nav-links {
+  display: flex;
+  align-items: center;
+  list-style: none;
+  gap: 20px;
+}
+
+/* The dropdown container */
+.dropdown {
+  position: relative; /* Needed for absolute positioning of content */
+}
+
+/* Dropdown button */
+.dropdown .dropbtn {
+  font-size: 16px;
+  font-weight: 600;
+  border: none;
+  outline: none;
+  color: #222;
+  padding: 14px 16px;
+  background-color: inherit;
+  font-family: inherit;
+  margin: 0;
+  cursor: pointer; /* Add cursor for better UX */
+  display: block; /* Ensure it takes full width in mobile view */
+}
+
+/* Add a hover effect to navbar links and the dropdown button */
+.nav-links a:hover,
+.dropdown:hover .dropbtn {
+  color: #0e407c;
+  font-weight: 600;
+}
+
+/* Dropdown content (hidden by default) */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 120px; /* Increased for better readability */
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+  border-radius: 5px;
+  left: 0; /* Align to the left of the dropdown button */
+}
+
+/* Links inside the dropdown */
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
+
+/* Add a grey background color to dropdown links on hover */
+.dropdown-content a:hover {
+  background-color: #ddd;
+}
+
+/* Show the dropdown menu on hover */
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.nav-links a {
+  display: block;
+  padding: 10px 16px;
+  color: #222;
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: 600;
+  text-transform: uppercase;
+  transition: all ease-in-out 100ms;
+}
+
+.nav-links a:hover {
+  color: #0e407c;
+  border-radius: 5px;
+}
+
+.nav-links .nav-cta-button {
+  padding: 10px 18px;
+  margin-left: 16px;
+  border: #222 solid 2px;
+  border-radius: 50px;
+}
+
+.nav-links .nav-cta-button:hover {
+  background-color: #222;
+  border-radius: 10px;
+  color: #fff;
+}
+
+.hamburger {
+  display: none;
+  cursor: pointer;
+  width: 34px;
+}
+
+.hamburger .bar {
+  flex-basis: 100%;
+  height: 4px;
+  background-color: #222;
+  margin: 3px;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  nav {
+      display: flex;
+      flex-wrap: wrap;
+  }
+
+  .hamburger {
+      display: flex;
+      flex-wrap: wrap;
+  }
+
+  .logo {
+      height: 80px;
+  }
+
+  .nav-links {
+      display: none;
+      flex-basis: 100%;
+      flex-wrap: wrap;
+  }
+
+  .nav-links li {
+      flex-basis: 100%;
+  }
+
+  .nav-links a {
+      text-align: center;
+      font-size: 28px;
+  }
+
+  .nav-links a:hover {
+      background-color: #222;
+  }
+
+  .nav-links .nav-cta-button {
+      padding: 30px 16px;
+      margin-left: 0;
+      border: none;
+      border-radius: 0;
+      margin-bottom: 20px;
+  }
+
+  .nav-links .nav-cta-button:hover {
+      background-color: #222;
+  }
+  .dropdown .dropbtn {
+    font-size: 28px;
+  }
+
+}
+
+
+
+
+/* Global Styles */
+@import url('https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,100..900&display=swap');
+
+
+/* Animation for the appear effect */
+@keyframes appear {
+  from {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+
+  to {
+    transform: translatex(0);
+    opacity: 1;
+  }
+}
+
+
+@keyframes appear-bottom {
+  from {
+    transform: translateY(80px);
+    opacity: 0;
+    filter: blur(2px);
+  }
+  60% {
+    filter: blur(0px);
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+    filter: blur(0);
+  }
+}
+
+
+body {
+  font-family: "Inter", sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #fff;
+  color: #222;
+  animation: appear .5s linear;
+  /* Apply appear animation with 1s duration and linear timing */
+}
+
+.welcome h1 {
+  margin-top: 50px;
+  font-size: 3.5em;
+  /* Larger, more prominent heading */
+  color: #222;
+  /* A nice primary color */
+  margin-bottom: 50px;
+  /* Space below the main heading */
+  line-height: 1.5;
+  /* Improve readability of the heading */
+  width: 125%;
+}
+
+.welcome h3 {
+  font-size: 1.25em;
+  /* Slightly smaller subheading */
+  color: #222;
+  /* A softer secondary color */
+  margin-bottom: 50px;
+  /* Space below the subheading */
+}
+
+.welcome h4 {
+  font-size: 1em;
+  /* Standard paragraph size */
+  color: #3d3d3dfb;
+  /* Darker text for better readability */
+  line-height: 1.5;
+  /* Improve readability of the paragraph */
+}
+
+.welcome a {
+  text-decoration: none;
+  /* Remove underline from links */
+  color: #fff;
+  /* A nice primary color */
+  font-weight: bold;
+  /* Make the link bold */
+  transition: color 0.3s ease;
+  /* Smooth transition for hover effect */
+}
+.contact-button {
+  background-color: #222;
+  color: #fff;
+  padding: 10px 100px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1em;
+  transition: background-color 0.3s ease;
+  margin-top: 30px;
+  display: inline-block;
+}
+
+.contact-button:hover {
+  background-color: #fff;
+  color: #222;
+  border: 1px solid #222;
+}
+
+
+
+.hero-section {
+  margin-left: 50px;
+  display: flex;
+  gap: 20px;
+  z-index: -1;
+}
+
+.item:nth-child(1) {
+  flex-grow: 1;
+  width: auto;
+  align-self: stretch;
+  flex-basis: 0%;
+}
+
+.item:nth-child(2) {
+  flex-grow: 1;
+  width: 100%;
+  align-self: stretch;
+  flex-basis: 30%;
+  height: 100%;
+}
+
+
+
+/* Slideshow container */
+.slideshow-container {
+  max-width: 90%;
+  height: 700px;
+  position: relative;
+  margin: auto;
+  border: none;
+  overflow: hidden;
+  /* Important! Clips images that overflow */
+  border-radius: 500px 0px 0px 5px;
+  box-shadow: inset 10px 0px 15px 0px rgb(0, 0, 0);
+  animation: appear linear;
+}
+
+
+/* Hide the images by default */
+.mySlides {
+  display: none;
+  height: 100%;
+  /* Make the slide container take up the full height */
+}
+
+/* Style for the image inside the slide */
+.mySlides img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  /* Or 'contain', 'fill', etc., depending on your preference */
+}
+
+/* Next & previous buttons */
+.prev,
+.next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  margin-top: -22px;
+  padding: 25px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  opacity: 0.5;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover,
+.next:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+
+/* The dots/bullets/indicators */
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+  display: none;
+  /* Hide dots by default */
+}
+
+.active,
+.dot:hover {
+  background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@keyframes fade {
+  from {
+    opacity: .4
+  }
+
+  to {
+    opacity: 1
+  }
+}
+
+
+.banner-container {
+  position: relative;
+  width: 100%;
+  height: 400px; /* Height of the banner */
+  margin: auto;
+  background-color: #fff;
+  overflow: hidden;
+}
+
+
+.discover-content {
+  color: #222; /* Text color */
+  text-align: center;
+  padding: 50px 0;
+  border-radius: 8px;
+}
+
+.discover-content h1 {
+  font-size: 2.5em;
+  margin: 0;
+}
+
+.discover-content p {
+  font-size: 1.2em;
+  margin: 10px 0;
+}
+
+
+
+/* CSS for the Brands Section */
+@keyframes slide {
+  from {
+    transform: translateX(0);
+    /* Start from the original position */
+  }
+
+  to {
+    transform: translateX(-100%);
+  }
+}
+
+
+/* CSS for Customer Feedback Section */
+.feedback-section {
+  margin-left: 50px;
+  margin-right: 50px;
+  background-color: #fff;
+  text-align: center;
+  animation: appear-bottom 2s cubic-bezier(0.4,0,0.2,1) both;
+  animation-timeline: view();
+  animation-range: entry 0% cover 40%;
+}
+
+.feedback-slider {
+  display: flex;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  padding: 0 20px;
+  margin-bottom: 20px;
+}
+
+.feedback-slider::-webkit-scrollbar {
+  display: none;
+  /* Hide scrollbar for a cleaner look */
+}
+
+
+
+.feedback-title
+  {
+    font-size: 2.25rem;
+    font-weight: 600;
+    color: #1a202c;
+    margin-bottom: 40px;
+    line-height: 1.2;
+    animation: appear-bottom linear;
+    /* Apply appear-bottom animation with linear timing */
+    animation-timeline: view();
+    /* Animate based on the element's visibility in the viewport */
+    animation-range: entry 0% cover 40%;
+    /* Start animation when the top of the element enters the viewport and end when 40% of it is covered */
+  }
+.feedback-item {
+  flex: 0 0 100%;
+  /* Full width for each item in the slider */
+  padding: 20px;
+  border-radius: 12px;
+  /* Slightly more rounded corners */
+  background-color: #fff;
+  /* White background for feedback items */
+  /* Subtle shadow */
+  margin: 0 10px;
+  /* Space between feedback items */
+  scroll-snap-align: center;
+  transition: transform 0.3s ease;
+  /* Smooth transition for hover effect */
+  display: flex;
+  /* Use flexbox for vertical alignment */
+  flex-direction: column;
+  /* Stack content vertically */
+  align-items: center;
+  /* Center content horizontally */
+  text-align: center;
+  /* Center text within the feedback item */
+}
+
+.feedback-item img {
+  width:100%;
+  max-width: 700px;
+  height: 700px;
+  border-radius: 50%;
+  /* Make it a circle */
+  margin-bottom: 0px;
+  /* Increased margin below the avatar */
+  object-fit: cover;
+  /* Ensure image covers the area, cropping if needed */
+  /* Add a subtle shadow to the avatar */
+  background: white;
+}
+
+
+.feedback-controls {
+  display: flex;
+  justify-content: center;
+  /* Center the buttons */
+  margin-top: 40px;
+  /* Increased margin above the buttons */
+}
+
+.feedback-button {
+  background-color: #222;
+  /* Blue button */
+  color: #fff;
+  border: none;
+  padding: 12px 24px;
+  /* Slightly increased padding */
+  border-radius: 8px;
+  /* More rounded corners for buttons */
+  cursor: pointer;
+  font-size: 1.1rem;
+  /* Increased font size for buttons */
+  transition: background-color 0.3s ease;
+  /* Smooth transition */
+  margin: 0 10px;
+  /* Add horizontal margin between buttons */
+}
+
+.feedback-button:hover {
+  background-color: #fff;
+  color: #222;
+  border: 1px solid #222;
+  /* Darker blue on hover */
+}
+
+.feedback-button:disabled {
+  background-color: #222;
+  /* Gray out disabled button */
+  cursor: not-allowed;
+  opacity: 0.7;
+  /* Reduce opacity for disabled state */
+}
+
+/* ----------------------------------------------------------------------
+        Design 1: Card-Based with Icons
+        ---------------------------------------------------------------------- */
+.achievements-section.design-1 {
+  background-color: #fff;
+  padding: 60px 0;
+  text-align: center;
+}
+
+.achievements-section.design-1 .achievements-title {
+  font-size: 2.25rem;
+  font-weight: 600;
+  color: #1a202c;
+  margin-bottom: 40px;
+  line-height: 1.2;
+  animation: appear linear;
+  /* Apply appear animation with linear timing */
+  animation-timeline: view();
+  /* Animate based on the element's visibility in the viewport */
+  animation-range: entry 0% cover 40%;
+  /* Start animation when the top of the element enters the viewport and end when 40% of it is covered */
+}
+
+.achievements-section.design-1 .achievements-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+  padding: 0 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.achievements-section.design-1 .achievement-item {
+  background-color: #fff;
+  border-radius: 12px;
+  padding: 30px;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+  text-align: center;
+  animation: appear linear;
+  /* Apply appear animation with linear timing */
+  animation-timeline: view();
+  /* Animate based on the element's visibility in the viewport */
+  animation-range: entry 0% cover 40%;
+  /* Start animation when the top of the element enters the viewport and end when 40% of it is covered */
+  /* Center content */
+}
+
+.achievements-section.design-1 .achievement-item:hover {
+  transform: translateY(-8px);
+}
+
+.achievements-section.design-1 .achievement-item i {
+  font-size: 48px;
+  /* Larger icon size */
+  margin-bottom: 20px;
+  color: #222;
+  /* Theme color */
+}
+
+.achievements-section.design-1 .achievement-item h3 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #2d3748;
+  margin-bottom: 15px;
+}
+
+.achievements-section.design-1 .achievement-item p {
+  font-size: 1.1rem;
+  line-height: 1.7;
+  color: #4a5568;
+}
+
+/* ----------------------------------------------------------------------
+      Design 2: Timeline Style
+      ---------------------------------------------------------------------- */
+.achievements-section.design-2 {
+  padding: 60px 0;
+  text-align: center;
+  background-color: #fff;
+}
+
+.achievements-section.design-2 .achievements-title {
+  font-size: 2.25rem;
+  font-weight: 600;
+  color: #1a202c;
+  margin-bottom: 40px;
+  line-height: 1.2;
+  animation: appear linear;
+  /* Apply appear animation with linear timing */
+  animation-timeline: view();
+  /* Animate based on the element's visibility in the viewport */
+  animation-range: entry 0% cover 40%;
+  /* Start animation when the top of the element enters the viewport and end when 40% of it is covered */
+}
+
+.achievements-section.design-2 .achievements-timeline {
+  position: relative;
+  padding: 40px 0;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.achievements-section.design-2 .achievements-timeline::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 90%;
+  width: 4px;
+  background-color: #cbd5e0;
+  /* Timeline line color */
+  margin-left: -2px;
+}
+
+.achievements-section.design-2 .timeline-item {
+  margin-bottom: 40px;
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  clear: both;
+}
+
+.achievements-section.design-2 .timeline-item:last-child {
+  margin-bottom: 0;
+}
+
+.achievements-section.design-2 .timeline-item-content {
+  width: 45%;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s ease;
+  animation: appear linear;
+  /* Apply appear animation with linear timing */
+  animation-timeline: view();
+  /* Animate based on the element's visibility in the viewport */
+  animation-range: entry 0% cover 40%;
+  /* Start animation when the top of the element enters the viewport and end when 40% of it is covered */
+}
+
+.achievements-section.design-2 .timeline-item-content:hover {
+  transform: translateY(-4px);
+}
+
+.achievements-section.design-2 .timeline-item-content h3 {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #2d3748;
+  margin-bottom: 10px;
+}
+
+.achievements-section.design-2 .timeline-item-content p {
+  font-size: 1rem;
+  line-height: 1.7;
+  color: #4a5568;
+}
+
+.achievements-section.design-2 .timeline-item-left {
+  text-align: right;
+}
+
+.achievements-section.design-2 .timeline-item-right {
+  text-align: left;
+}
+
+.achievements-section.design-2 .timeline-item-icon {
+  position: absolute;
+  top: 50%;
+  left: 90%;
+  transform: translate(-50%, -50%);
+  width: 50px;
+  /* Increased size */
+  height: 50px;
+  border-radius: 50%;
+  background-color: #222;
+  /* Theme color */
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 24px;
+  /* Increased icon size */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.achievements-section.design-2 .timeline-item-icon:hover {
+  background-color: #fff;
+  color: #222;
+  border: 1px solid #222;
+  /* Darker blue on hover */
+}
+
+.achievements-section.design-2 .timeline-item:nth-child(odd) .timeline-item-content {
+  margin-left: 25%;
+}
+
+.achievements-section.design-2 .timeline-item:nth-child(even) .timeline-item-content {
+  margin-right: 25%;
+}
+
+.achievements-section.design-1 .achievements-title,
+.achievements-section.design-1 .achievements-grid,
+.achievements-section.design-1 .achievement-item {
+  animation: appear-bottom 0.9s cubic-bezier(0.4,0,0.2,1) both;
+  animation-timeline: view();
+  animation-range: entry 0% cover 40%;
+}
+
+/* CSS for Product Showcase Section */
+.product-section {
+  background-color: #fff;
+  padding: 60px 0;
+  text-align: center;
+  animation: appear linear;
+  /* Apply appear animation with linear timing */
+  animation-timeline: view();
+  /* Animate based on the element's visibility in the viewport */
+  animation-range: entry 0%;
+  /* Start animation when the top of the element enters the viewport and end when 40% of it is covered */
+}
+
+.product-title {
+  font-size: 2.25rem;
+  font-weight: 600;
+  color: #1a202c;
+  margin-bottom: 40px;
+  line-height: 1.2;
+}
+
+.product-categories {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  padding: 0 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.product-category {
+  background-color: #fff;
+  border-radius: 12px;
+  padding: 25px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s ease;
+  max-width: 100%;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.product-category:hover {
+  transform: translateY(-6px);
+}
+
+.product-category img {
+  width: 200px;
+  height: 150px;
+  object-fit: contain;
+  margin-bottom: 20px;
+  border-radius: 8px;
+}
+
+.product-category h3 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #2d3748;
+  margin-bottom: 10px;
+}
+
+.product-category p {
+  font-size: 1.1rem;
+  line-height: 1.7;
+  color: #4a5568;
+}
+
+.product-section,
+.product-title,
+.product-categories,
+.product-category {
+  animation: appear-bottom 1s cubic-bezier(0.4,0,0.2,1) both;
+  animation-delay: 1s;
+  animation-timeline: view();
+  animation-range: entry 0% cover 40%;
+  filter: none;
+}
+
+/* Added styles for the button */
+.store-button {
+  background-color: #222;
+  color: #fff;
+  border: none;
+  padding: 12px 24px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 1.1rem;
+  transition: background-color 0.3s ease;
+  margin-top: 20px;
+  /* Add space above the button */
+}
+
+.store-button:hover {
+  background-color: #fff;
+  color: #222;
+  border: 1px solid #222;
+}
+
+
+
+
+.brands {
+  margin-left: 50px;
+  margin-right: 50px;
+  overflow: hidden;
+  padding: 60px 0;
+  background: rgb(255, 255, 255);
+  white-space: nowrap;
+}
+
+.brands h2 {
+  text-align: center;
+}
+
+.brands-slide {
+  display: inline-block;
+  animation: 35s slide infinite linear;
+}
+
+
+.brands-slide img {
+  height: 100px;
+  margin: 0 40px;
+  /* Space between images */
+
+}
+
+
+.footer-wrapper {
+  display: flex;
+  justify-content: center;
+  /* Center content horizontally */
+  animation: appear linear;
+  /* Apply appear animation with linear timing */
+  animation-timeline: view();
+  /* Animate based on the element's visibility in the viewport */
+  animation-range: entry 0% cover 10%;
+  /* Start animation when the top of the element enters the viewport and end when 40% of it is covered */
+}
+
+.footer-spacer {
+  height: 10px;
+  width: 40%;
+  background-color: #787a7e;
+  border-radius: 10px;
+  box-shadow: 0 20px 10px rgba(0, 0, 0, 0.3);
+  opacity: 0.5;
+}
+
+/* Footer Styles */
+.footer {
+  background-color: #ffffff;
+  /* Example background color */
+  color: #222;
+  /* Example text color */
+  padding: 40px 0;
+
+}
+
+.footer-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+  /* Add some padding on the sides */
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  /* Allow columns to wrap to the next line on smaller screens */
+  justify-content: space-around;
+  /* Distribute space evenly around columns */
+}
+
+.footer-col {
+  width: calc(33.33% - 20px);
+  /* Roughly equal columns with some spacing */
+  margin-bottom: 30px;
+  /* Add spacing between rows of columns */
+}
+
+.footer-col h4 {
+  font-size: 1.2rem;
+  margin-bottom: 15px;
+  position: relative;
+  padding-bottom: 10px;
+  border-bottom: 2px solid #555;
+  /* Example underline */
+}
+
+.footer-col ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-col ul li a {
+  display: block;
+  text-decoration: none;
+  color: #222;
+  margin-bottom: 8px;
+  transition: color 0.3s ease;
+}
+
+.footer-col ul li a:hover {
+  color: #aaa;
+  text-decoration: underline;
+  /* Underline on hover */
+}
+
+.social-links img {
+  width: 30px;
+}
+
+.social-links img:hover {
+  transform: scale(1.1);
+  /* Slightly enlarge the image on hover */
+  transition: transform 0.3s ease;
+  /* Smooth transition for the scaling effect */
+}
+
+.copyright-footer {
+  background-color: #222; 
+  color: #fff;  
+  padding: 50px 20px; /* Add some padding around the text */
+  text-align: center; /* Center the text */
+  font-size: 0.9em; /* Slightly smaller font size */
+  border-top: 1px solid #c4c4c4; /* Add a subtle top border */
+}
+
+.copyright-symbol {
+  font-size: 1em; /* Ensure copyright symbol is readable */
+  margin-right: 5px; /* Add a little space after the symbol */
+}
+
+/* Responsive adjustments */
+@media (max-width: 1200px) {
+  .hero-section {
+    flex-direction: column;
+    gap: 24px;
+    margin-left: 0;
+    margin-right: 0;
+    align-items: stretch;
+    padding: 0 24px;
+  }
+  .item:nth-child(1),
+  .item:nth-child(2) {
+    width: 100%;
+    flex-basis: 100%;
+    align-self: stretch;
+  }
+  .slideshow-container {
+    height: 400px;
+    border-radius: 60px 0 0 5px;
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 900px) {
+  .hero-section {
+    flex-direction: column;
+    gap: 16px;
+    margin-left: 0;
+    margin-right: 0;
+    align-items: stretch;
+    padding: 0 12px;
+  }
+  .slideshow-container {
+    height: 300px;
+    border-radius: 40px 0 0 5px;
+    max-width: 100%;
+  }
+  .item:nth-child(1),
+  .item:nth-child(2) {
+    width: 100%;
+    flex-basis: 100%;
+    align-self: stretch;
+  }
+  .feedback-section {
+    margin-left: 10px;
+    margin-right: 10px;
+    padding: 30px 0;
+  }
+  .feedback-title {
+    font-size: 1.5rem;
+  }
+  .feedback-item img {
+    max-width: 400px;
+    height: auto;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero-section,
+  .brands,
+  .feedback-section {
+    margin-left: 0;
+    margin-right: 0;
+    padding: 0 4px;
+  }
+  .hero-section {
+    flex-direction: column;
+    gap: 10px;
+    align-items: stretch;
+    padding: 0 4px;
+  }
+  .item:nth-child(1),
+  .item:nth-child(2) {
+    width: 100%;
+    flex-basis: 100%;
+    align-self: stretch;
+  }
+  .slideshow-container {
+    height: 200px;
+    border-radius: 20px 0 0 5px;
+    max-width: 100vw;
+  }
+  .mySlides img {
+    border-radius: 20px 0 0 5px;
+  }
+  .footer-col {
+    width: calc(50% - 20px);
+    /* Two columns on medium screens */
+  }
+}
+
+@media (max-width: 576px) {
+  .hero-section {
+    padding: 0 2px;
+    gap: 8px;
+    align-items: stretch;
+  }
+  .slideshow-container {
+    height: 120px;
+    border-radius: 10px 0 0 5px;
+    max-width: 100vw;
+  }
+  .mySlides img {
+    border-radius: 10px 0 0 5px;
+  }
+  .feedback-section {
+    margin-left: 0;
+    margin-right: 0;
+    padding: 20px 0;
+  }
+  .feedback-title {
+    font-size: 1.1rem;
+    margin-bottom: 20px;
+  }
+  .feedback-slider {
+    padding: 0 5px;
+  }
+  .feedback-item {
+    padding: 10px;
+    margin: 0 2px;
+  }
+  .feedback-item img {
+    max-width: 150px;
+    height: auto; 
+    border-radius: 12px;
+  }
+  .feedback-controls {
+    margin-top: 20px;
+  }
+  .footer-col {
+    width: 100%;
+    /* Single column on small screens */
+  }
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
